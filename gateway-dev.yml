@@ -1,4 +1,6 @@
 zuul:
+  #敏感头过滤
+  sensitive-headers:
   host:
     connect-timeout-millis: 60000 # HTTP连接超时大于Hystrix的超时时间
     socket-timeout-millis: 60000 # socket超时
@@ -6,8 +8,8 @@ zuul:
     myProduct:
       path: /myProduct/**
       service-id: product
-      #敏感头过滤
-      sensitive-headers:
+      
+      
     #简洁
 #    product: /myProduct/**
   #ignored-patterns:
